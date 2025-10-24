@@ -65,7 +65,7 @@ img {
 nav {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1.2rem 2.5rem;
+  padding: 1.2rem 1.5rem;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 2rem;
@@ -158,7 +158,7 @@ nav {
 .emergency-btn {
   background: linear-gradient(135deg, var(--accent) 0%, #b91c1c 100%);
   color: var(--white);
-  padding: 0.85rem 1.8rem;
+  padding: 0.85rem 1.1rem;
   border-radius: 50px;
   font-weight: 700;
   display: flex;
@@ -166,13 +166,13 @@ nav {
   gap: 0.6rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
   position: relative;
   overflow: hidden;
   z-index: 1001;
   white-space: nowrap;
-  right: -40px;
+  /* right: -40px; */
 }
 
 .emergency-btn::before {
