@@ -1604,9 +1604,9 @@ footer {
   .hero-content h1 {
     font-size: 2.2rem;
   }
-  .hero {
+  /* .hero {
     margin-top: 20px;
-  }
+  } */
 
   .hero-stats {
     grid-template-columns: 1fr;
