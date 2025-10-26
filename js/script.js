@@ -127,14 +127,21 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Add parallax effect to hero overlay on scroll (mobile only)
+// Parallax effect for hero overlay (mobile only, smooth on iOS)
+const heroOverlay = document.querySelector(".hero-overlay");
+let ticking = false;
+
 window.addEventListener("scroll", () => {
-  const heroOverlay = document.querySelector(".hero-overlay");
-  if (heroOverlay && window.innerWidth <= 768) {
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * 0.3;
-    heroOverlay.style.transform = `translateY(${rate}px)`;
-  } else if (heroOverlay) {
-    heroOverlay.style.transform = "translateY(0)";
+  if (!heroOverlay || window.innerWidth > 768) return;
+
+  const scrolled = window.pageYOffset;
+
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const rate = Math.round(scrolled * 0.3); // round to avoid sub-pixel jitter
+      heroOverlay.style.transform = `translateY(${rate}px)`;
+      ticking = false;
+    });
+    ticking = true;
   }
 });

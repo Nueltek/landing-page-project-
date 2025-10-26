@@ -436,6 +436,10 @@ nav {
   border-radius: 12px;
   color: var(--white);
   max-width: 300px;
+  will-change: transform;
+  transform: translateZ(0); /* force GPU acceleration */
+  backface-visibility: hidden;
+
   transition: transform 0.3s ease;
 }
 
@@ -1604,9 +1608,9 @@ footer {
   .hero-content h1 {
     font-size: 2.2rem;
   }
-  /* .hero {
-    margin-top: 20px;
-  } */
+  .hero {
+    margin-top: 50px;
+  }
 
   .hero-stats {
     grid-template-columns: 1fr;
