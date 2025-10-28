@@ -1439,6 +1439,7 @@ footer {
   }
   .mobile-only {
     display: block;
+    text-align: center;
   }
   /* Hide desktop nav, show mobile menu */
   .nav-links {
