@@ -134,14 +134,16 @@ let ticking = false;
 window.addEventListener("scroll", () => {
   if (!heroOverlay || window.innerWidth > 768) return;
 
-  const scrolled = window.pageYOffset;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          heroOverlay.classList.add("is-visible");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      const rate = Math.round(scrolled * 0.3); // round to avoid sub-pixel jitter
-      heroOverlay.style.transform = `translateY(${rate}px)`;
-      ticking = false;
-    });
-    ticking = true;
-  }
+  observer.observe(heroOverlay);
 });
