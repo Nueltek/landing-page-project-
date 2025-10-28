@@ -439,7 +439,7 @@ nav {
   max-width: 300px;
 
   /* Start hidden */
-  opacity: 0;
+  opacity: 1;
   transform: translateY(40px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
@@ -1624,6 +1624,10 @@ footer {
   }
   .hero-actions {
     justify-content: center;
+  }
+
+  .hero-overlay {
+    opacity: 0;
   }
 
   .section {
