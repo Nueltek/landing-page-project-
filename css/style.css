@@ -429,7 +429,7 @@ nav {
 /* Overlay styling */
 .hero-overlay {
   position: absolute;
-  bottom: 2rem;
+  bottom: 5rem;
   right: 2rem;
   background: rgba(6, 95, 70, 0.95);
   backdrop-filter: blur(10px);
@@ -440,7 +440,7 @@ nav {
 
   /* Start hidden */
   opacity: 1;
-  transform: translateY(40px);
+  transform: translateY(60px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
